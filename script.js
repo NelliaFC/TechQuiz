@@ -13,6 +13,7 @@ var questionsArray = [
   
   ]
 //create global variables that point to certain parts of HTML
+
 var startButton = document.getElementById("start") 
 var timer = document.getElementById("time") 
 var questionsDiv = document.getElementById("questions")
@@ -23,7 +24,7 @@ var finalScore = document.getElementById("final-score")
 var intials = document.getElementById("initials") 
 //create timer that counts down to 30 seconds
 function startQuiz(){
-  var timeLeft = 30
+  var timeLeft = 30;
   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function() {
     // As long as the `timeLeft` is greater than 1
@@ -37,7 +38,7 @@ function startQuiz(){
       timer.textContent = timeLeft + ' second remaining';
       timeLeft--;
     } else {
-      // Once `timeLeft` gets to 0, set `timerEl` to an empty string
+      // Once `timeLeft` gets to 0, set `timer` to an empty string
       timer.textContent = '';
       // Use `clearInterval()` to stop the timer
       clearInterval(timeInterval);
@@ -46,6 +47,9 @@ function startQuiz(){
     }
   }, 1000);
 }
+function displayMessage() {
+  alert("You got a" + finalScore);
+  
 }
 //var select class = document.querySelector(".start") to ineract with classes only if you need to.
 window.document.querySelector("start");
@@ -59,11 +63,13 @@ console.dir(startButton)
 //onclick="setTimeout('alert('Surprise!')', 5000)"/>
 
 //create a CLICK event
-onclick="startQuiz"
+$("#start").click(function(){
+  console.log(questionsArray)
+})
 
 
 //inside CLICK event create a function If/else statement if wrong answer, TIME subtracted from total time
-function questionsArray()=
+//function questionsArray()=
 
 //For questions create an Array[] that loops
 
